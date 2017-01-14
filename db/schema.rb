@@ -1,4 +1,3 @@
-
 ActiveRecord::Schema.define(version: 20170114173849) do
 
   # These are extensions that must be enabled in order to support this database
