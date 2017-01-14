@@ -3,6 +3,10 @@ class PortfoliosController < ApplicationController
     @portfolio_items = Portfolio.all
   end
 
+  def angular
+    @angular_portfolio_items = Portfolio.angular
+  end
+  
   def new
     @portfolio_item = Portfolio.new
   end
@@ -10,7 +14,7 @@ class PortfoliosController < ApplicationController
   def create
     @portfolio_item = Portfolio.new(portfolio_params)
 
-  
+
       if @portfolio_item.save
         redirect_to @portfolio_item
       else
