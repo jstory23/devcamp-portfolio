@@ -6,9 +6,10 @@ class PortfoliosController < ApplicationController
   def angular
     @angular_portfolio_items = Portfolio.angular
   end
-  
+
   def new
     @portfolio_item = Portfolio.new
+    3.times {@portfolio_item.technologies.build }
   end
 
   def create
@@ -51,7 +52,7 @@ class PortfoliosController < ApplicationController
     private
 
     def portfolio_params
-      params.require(:portfolio).permit(:title, :subtitle, :body, :thumb_image, :main_image)
+      params.require(:portfolio).permit(:title, :subtitle, :body, :thumb_image, :main_image, technologies_attributes: [name])
     end
 
 end
