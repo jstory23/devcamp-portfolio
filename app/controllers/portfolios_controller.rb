@@ -17,7 +17,7 @@ class PortfoliosController < ApplicationController
 
 
       if @portfolio_item.save
-        redirect_to @portfolio_item
+        redirect_to portfolio_show_path(@portfolio_item)
       else
         render :new
       end
@@ -52,7 +52,7 @@ class PortfoliosController < ApplicationController
     private
 
     def portfolio_params
-      params.require(:portfolio).permit(:title, :subtitle, :body, :thumb_image, :main_image, technologies_attributes: [name])
+      params.require(:portfolio).permit(:title, :subtitle, :body, :thumb_image, :main_image, technologies_attributes: [:name])
     end
 
 end
