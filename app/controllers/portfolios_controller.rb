@@ -1,6 +1,6 @@
 class PortfoliosController < ApplicationController
   layout 'portfolio'
-  
+
   def index
     @portfolio_items = Portfolio.all
   end
@@ -37,7 +37,7 @@ class PortfoliosController < ApplicationController
       @portfolio_item = Portfolio.find(params[:id])
 
       if @portfolio_item.update(portfolio_params)
-        redirect_to @portfolio_item
+        redirect_to portfolio_show_path(@portfolio_item)
       else
         render :edit
 
