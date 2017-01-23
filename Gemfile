@@ -55,4 +55,4 @@ gem 'friendly_id', :require => "friendly_id"
 gem 'devise', '~> 4.2'
 gem 'bootstrap', '~> 4.0.0.alpha6'
 
-gem 'story_view_tool', git: 'https://github.com/jstory23/story_view_tool'
+gem 'story_view_tool', '~> 0.1.0'
