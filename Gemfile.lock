@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/jstory23/story_view_tool
+  revision: a63c2bb26936e5bb2ddd901a37a20af949f2d33a
+  specs:
+    story_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -187,6 +193,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
+  story_view_tool!
   turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)

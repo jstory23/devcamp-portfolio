@@ -15,4 +15,9 @@ module ApplicationHelper
       content_tag(:p, greeting, class: "source-greeting")
     end
   end
+
+  def copyright_generator
+    StoryViewTool::Renderer.copyright 'Jordan Story', 'All rights reserved'
+  end
+
 end
