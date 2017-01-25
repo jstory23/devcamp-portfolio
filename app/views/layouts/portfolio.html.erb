@@ -15,24 +15,14 @@
   </head>
 
   <body>
-    <!-- start of navigation -->
-
+    
     <%= render 'shared/portfolio_nav' %>
 
-    <!-- end of navigation -->
-
-    <!-- start of masthead -->
-    <%= render 'shared/portfolio_masthead' %>
-
-    <!-- end of masthead -->
-
+    <%= render 'shared/portfolio_masthead' unless logged_in?(:site_admin) %>
 
     <%= yield %>
 
-    <!-- start of footer -->
-
     <%= render 'shared/portfolio_footer' %>
-    <!-- end of footer -->
 
     <%= source_helper("application") %>
   </body>
