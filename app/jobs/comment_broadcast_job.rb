@@ -1,4 +1,4 @@
-Class CommentBroadcastJob < ApplicationJob
+class CommentBroadcastJob < ApplicationJob
   queue_as :default
 
   def perform(comment)
@@ -8,7 +8,6 @@ Class CommentBroadcastJob < ApplicationJob
   private
 
   def render_comment(comment)
-    CommentsController.render partial: 'comments/comment', locals: {comment: comment}
+    CommentsController.render partial: 'comments/comment', locals: { comment: comment }
   end
-
 end
