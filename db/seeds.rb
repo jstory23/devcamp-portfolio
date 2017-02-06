@@ -2,7 +2,6 @@
   Topic.create!(
     title: "#{topic}"
   )
-
 end
 
 puts "3 Topics created"
